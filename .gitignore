@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+ephe/*.se1
+jathakam.db
+.pytest_cache/

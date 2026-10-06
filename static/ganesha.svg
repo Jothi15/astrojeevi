@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Ganesha">
+  <g fill="none" stroke="#8a5a1f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ears -->
+    <path d="M28 34 C10 30, 6 50, 22 58 C28 60, 32 56, 32 50 Z" fill="#f2c879" />
+    <path d="M72 34 C90 30, 94 50, 78 58 C72 60, 68 56, 68 50 Z" fill="#f2c879" />
+    <!-- head -->
+    <circle cx="50" cy="46" r="22" fill="#f6d896" />
+    <!-- crown -->
+    <path d="M40 27 C44 19, 56 19, 60 27" fill="#d9a04a" />
+    <circle cx="50" cy="20" r="3.4" fill="#c17f2e" stroke="none" />
+    <!-- eyes -->
+    <circle cx="43" cy="44" r="2" fill="#5b3a29" stroke="none" />
+    <circle cx="57" cy="44" r="2" fill="#5b3a29" stroke="none" />
+    <!-- tusk -->
+    <path d="M46 55 L44 60" stroke="#fffaf0" stroke-width="2.6" />
+    <!-- trunk -->
+    <path d="M50 54 C50 62, 42 62, 42 70 C42 78, 52 80, 56 74" fill="none" />
+  </g>
+</svg>

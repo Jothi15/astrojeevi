@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namma Jothidam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="astrojeevi_logo.jpg" alt="AstroJeevi Logo" class="brand-logo-img" />
+      <div class="brand-text">
+        <h1 id="pageTitle">AstroJeevi</h1>
+        <p id="pageTagline" class="tagline">Vedic Astrology Birth Chart, Divisional Vargas & Divine Timing</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <nav class="top-tabs">
+        <button type="button" class="top-tab active" data-page="home" id="lblTopHome">Home</button>
+        <button type="button" class="top-tab" data-page="jathakam" id="lblTopJathakam">Birth Chart</button>
+        <button type="button" class="top-tab" data-page="prasannam" id="lblTopPrasannam">Prasannam</button>
+        <button type="button" class="top-tab" data-page="pariharam" id="lblTopPariharam">Pariharam</button>
+        <button type="button" class="top-tab" data-page="reading" id="lblTopReading">Reading</button>
+      </nav>
+      <select id="langToggle">
+        <option value="en">English</option>
+        <option value="ta">தமிழ்</option>
+      </select>
+    </div>
+  </header>
+  <div class="kolam-divider" aria-hidden="true"></div>
+
+  <!-- Full-Width Hero Section (Astrology Portal Style) -->
+  <section id="homeHeroSection" class="hero-fullwidth">
+    <div class="hero-fullwidth-container">
+      <div class="hero-left-content">
+        <div class="astro-kicker">
+          <span class="kicker-line"></span>
+          <span class="kicker-text" id="heroKicker">Explore the Vedic Horoscope</span>
+          <span class="kicker-line"></span>
+        </div>
+
+        <h1 class="astro-main-title">
+          <span class="title-welcome" id="heroWelcome">WELCOME TO THE</span>
+          <span class="title-world-line">
+            <span class="title-world" id="heroTitleWorld">WORLD OF</span>
+            <span class="title-astro" id="heroTitleAstrology">ASTROLOGY</span>
+            <span class="sparkle-accent">✦</span>
+          </span>
+        </h1>
+
+        <p class="astro-description" id="heroDesc">
+          High-precision Vedic Jathakam calculations calibrated with Swiss Ephemeris and Sidereal Lahiri Ayanamsa. Explore your South Indian Rasi chart, 7 Divisional Vargas (D1&ndash;D60), 5-Tier Vimshottari Dasa, Auspicious Raja Yogas, Thithi Soonyam, Mudakku Rasi, and instant Chandra Nadi Prasannam.
+        </p>
+
+        <div class="astro-cards-grid">
+          <button type="button" class="astro-card" id="heroJathakamBtn">
+            <div class="card-icon-wrap">
+              <span class="card-icon">🪐</span>
+            </div>
+            <div class="card-text-wrap">
+              <span class="card-title" id="lblCard1Title">Birth Chart (Jathakam)</span>
+              <span class="card-link"><span id="lblCard1Action">CALCULATE NOW</span> <span class="arrow">&rarr;</span></span>
+            </div>
+          </button>
+
+          <button type="button" class="astro-card" id="heroPrasBtn">
+            <div class="card-icon-wrap">
+              <span class="card-icon">🪔</span>
+            </div>
+            <div class="card-text-wrap">
+              <span class="card-title" id="lblCard2Title">Chandra Nadi Prasannam</span>
+              <span class="card-link"><span id="lblCard2Action">VIEW TIMING</span> <span class="arrow">&rarr;</span></span>
+            </div>
+          </button>
+
+          <button type="button" class="astro-card" id="heroPariharamBtn">
+            <div class="card-icon-wrap">
+              <span class="card-icon">🕉️</span>
+            </div>
+            <div class="card-text-wrap">
+              <span class="card-title" id="lblCard3Title">Sacred Pariharams</span>
+              <span class="card-link"><span id="lblCard3Action">EXPLORE REMEDIES</span> <span class="arrow">&rarr;</span></span>
+            </div>
+          </button>
+
+          <button type="button" class="astro-card" id="heroReadingBtn">
+            <div class="card-icon-wrap">
+              <span class="card-icon">📖</span>
+            </div>
+            <div class="card-text-wrap">
+              <span class="card-title" id="lblCard4Title">Vedic Knowledge</span>
+              <span class="card-link"><span id="lblCard4Action">READ MORE</span> <span class="arrow">&rarr;</span></span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-right-visual">
+        <img src="rs.png" alt="AstroJeevi Vedic Astrology Celestial Chart" class="hero-raw-image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do Section -->
+  <section id="homeWhatWeDoSection" class="what-we-do-section">
+    <div class="wwd-bg-overlay"></div>
+    <div class="what-we-do-container">
+      <div class="what-we-do-visual">
+        <div class="what-we-do-halo-ring">
+          <div class="what-we-do-frame">
+            <img src="trd.png" alt="Our Astrologers Work For You" class="what-we-do-img" />
+          </div>
+        </div>
+      </div>
+      <div class="what-we-do-content">
+        <div class="wwd-header-group">
+          <span class="section-tag" id="lblWwdTag">WHAT WE DO</span>
+          <h2 class="section-heading" id="lblWwdHeading">OUR ASTROLOGY WORKS FOR YOU</h2>
+          <p class="section-desc" id="lblWwdDesc">
+            We combine ancient Vedic astrology shastras with modern Swiss Ephemeris precision. Get in-depth Rasi &amp; Navamsa analysis, accurate D1 to D60 Divisional Vargas, 5-level Vimshottari Dasa timing, auspicious Raja Yogas detection, Thithi Soonyam, Mudakku Rasi, and instant Chandra Nadi Prasannam with traditional temple pariharams.
+          </p>
+        </div>
+
+        <div class="wwd-features-grid">
+          <div class="wwd-feat-card">
+            <div class="wwd-feat-icon">✨</div>
+            <div class="wwd-feat-text">
+              <h4 id="lblWwdFeat1Title">Swiss Ephemeris Precision</h4>
+              <p id="lblWwdFeat1Desc">Sub-arcsecond celestial calculations with true Lahiri Sidereal Ayanamsa.</p>
+            </div>
+          </div>
+          <div class="wwd-feat-card">
+            <div class="wwd-feat-icon">📜</div>
+            <div class="wwd-feat-text">
+              <h4 id="lblWwdFeat2Title">D1 – D60 Vargas &amp; Navamsa</h4>
+              <p id="lblWwdFeat2Desc">Comprehensive harmonic charts including Rasi, Navamsa, Dasamsa &amp; Shashtiamsa.</p>
+            </div>
+          </div>
+          <div class="wwd-feat-card">
+            <div class="wwd-feat-icon">⏳</div>
+            <div class="wwd-feat-text">
+              <h4 id="lblWwdFeat3Title">5-Tier Vimshottari Timeline</h4>
+              <p id="lblWwdFeat3Desc">Precise planetary periods from Mahadasa down to Prana sub-periods.</p>
+            </div>
+          </div>
+          <div class="wwd-feat-card">
+            <div class="wwd-feat-icon">🕉️</div>
+            <div class="wwd-feat-text">
+              <h4 id="lblWwdFeat4Title">Prasannam &amp; Pariharams</h4>
+              <p id="lblWwdFeat4Desc">Instant Chandra Nadi Prasannam with authentic Sthala Parikara remedies.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wwd-stats-row">
+          <div class="wwd-stat-pill">
+            <span class="stat-num">16+</span>
+            <span class="stat-label" id="lblWwdStat1">Divisional Charts</span>
+          </div>
+          <div class="wwd-stat-pill">
+            <span class="stat-num">50+</span>
+            <span class="stat-label" id="lblWwdStat2">Yogas &amp; Doshas</span>
+          </div>
+          <div class="wwd-stat-pill">
+            <span class="stat-num">100%</span>
+            <span class="stat-label" id="lblWwdStat3">Authentic Sastras</span>
+          </div>
+        </div>
+
+        <button type="button" class="what-we-do-btn" id="wwdGetStartedBtn">
+          <span id="lblWwdBtn">Get started</span>
+          <svg class="wwd-btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cosmic Modules Section (Section 3) -->
+  <section id="homeModulesSection" class="home-modules-section">
+    <div class="modules-bg-glow"></div>
+    <div class="modules-container">
+      <div class="modules-header">
+        <div class="modules-tag-wrap">
+          <span class="sparkle-gold">✦</span>
+          <span class="modules-tag" id="lblModTag">ADVANCED VEDIC SHASTRA SUITE</span>
+          <span class="sparkle-gold">✦</span>
+        </div>
+        <h2 class="modules-title" id="lblModHeading">EVERY DIMENSION OF YOUR HOROSCOPE, UNLOCKED</h2>
+        <p class="modules-desc" id="lblModDesc">
+          Delve deeper than basic charts with our specialized astrological modules. From multi-tiered Dasa timelines to rare Raja Yoga signatures, every calculation is rooted in classical Parashara and Jaimini principles.
+        </p>
+      </div>
+
+      <div class="modules-grid">
+        <!-- Card 1: Vargas -->
+        <div class="module-card" id="modCardVargas">
+          <div class="module-card-top">
+            <div class="module-icon-badge">🪐</div>
+            <span class="module-chip" id="lblModChip1">16+ Harmonic Vargas</span>
+          </div>
+          <h3 class="module-card-title" id="lblModCard1Title">D1 &ndash; D60 Divisional Vargas</h3>
+          <p class="module-card-text" id="lblModCard1Desc">Comprehensive harmonic charts including Rasi (D1), Navamsa (D9), Dasamsa (D10), and Shashtiamsa (D60) with complete house distributions.</p>
+          <div class="module-card-footer">
+            <span class="module-action" id="lblModCard1Action">Explore Vargas &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Dasas -->
+        <div class="module-card" id="modCardDasas">
+          <div class="module-card-top">
+            <div class="module-icon-badge">⏳</div>
+            <span class="module-chip" id="lblModChip2">5-Tier Precision</span>
+          </div>
+          <h3 class="module-card-title" id="lblModCard2Title">Vimshottari Dasa Timeline</h3>
+          <p class="module-card-text" id="lblModCard2Desc">Expand nested planetary periods from Mahadasa down to Pratyantar, Sookshma, and Prana levels with exact start and end dates.</p>
+          <div class="module-card-footer">
+            <span class="module-action" id="lblModCard2Action">View Timeline &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Yogas -->
+        <div class="module-card" id="modCardYogas">
+          <div class="module-card-top">
+            <div class="module-icon-badge">👑</div>
+            <span class="module-chip" id="lblModChip3">50+ Classical Yogas</span>
+          </div>
+          <h3 class="module-card-title" id="lblModCard3Title">Raja Yogas &amp; Dignities</h3>
+          <p class="module-card-text" id="lblModCard3Desc">Instant detection of Gajakesari, Budhaditya, Pancha Mahapurusha, Mangal Dosha, Neecha Bhanga, and Parivartana Yogas.</p>
+          <div class="module-card-footer">
+            <span class="module-action" id="lblModCard3Action">Detect Yogas &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Prasannam -->
+        <div class="module-card" id="modCardPrasannam">
+          <div class="module-card-top">
+            <div class="module-icon-badge">🌙</div>
+            <span class="module-chip" id="lblModChip4">Live GPS Real-Time</span>
+          </div>
+          <h3 class="module-card-title" id="lblModCard4Title">Chandra Nadi Prasannam</h3>
+          <p class="module-card-text" id="lblModCard4Desc">Live GPS-calculated Moon transit degrees, Nakshatra Pada, and instant horary query answering for the exact current moment.</p>
+          <div class="module-card-footer">
+            <span class="module-action" id="lblModCard4Action">Cast Prasannam &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Vulnerabilities -->
+        <div class="module-card" id="modCardBlocks">
+          <div class="module-card-top">
+            <div class="module-icon-badge">🛡️</div>
+            <span class="module-chip" id="lblModChip5">Dosha Diagnostics</span>
+          </div>
+          <h3 class="module-card-title" id="lblModCard5Title">Thithi Soonyam &amp; Mudakku</h3>
+          <p class="module-card-text" id="lblModCard5Desc">Identify void lunar rasis, blocked degrees via Mudakku calculation, Kaala Pakai afflictions, and Planetary Drekkana controllers.</p>
+          <div class="module-card-footer">
+            <span class="module-action" id="lblModCard5Action">Analyze Blocks &rarr;</span>
+          </div>
+        </div>
+
+        <!-- Card 6: Pariharams -->
+        <div class="module-card" id="modCardPariharam">
+          <div class="module-card-top">
+            <div class="module-icon-badge">🛕</div>
+            <span class="module-chip" id="lblModChip6">Authentic Sthala Kshetrams</span>
+          </div>
+          <h3 class="module-card-title" id="lblModCard6Title">Sacred Remedies &amp; Pariharams</h3>
+          <p class="module-card-text" id="lblModCard6Desc">Traditional Tamil Nadu temple pariharams, Upasana Deivam calculation, and authentic remedial guidance for dosha alleviation.</p>
+          <div class="module-card-footer">
+            <span class="module-action" id="lblModCard6Action">Find Remedies &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Navagrahas Cosmic Mandalam & Planetary Spheres -->
+  <section id="homeNavagrahaSection" class="home-navagraha-section">
+    <div class="cosmos-bg-glow"></div>
+    <div class="home-navagraha-container">
+      <div class="cosmos-header">
+        <div class="cosmos-badge">✨ SACRED CELESTIAL ENERGIES</div>
+        <h2 class="cosmos-title">The Nine Vedic Planetary Lords <span class="gold-gradient">(நவக்கிரகங்கள்)</span></h2>
+        <p class="cosmos-subtitle">In Vedic Jyotish, the Navagrahas are the cosmic architects of human destiny, karma, health, and spiritual evolution. Interact with the celestial orbits below to explore their divine attributes and placements.</p>
+      </div>
+
+      <div class="cosmos-interactive-stage">
+        <!-- Left: Animated Celestial Solar System Orbits -->
+        <div class="cosmos-orbit-wrap">
+          <div class="cosmos-orbit-space" id="cosmosOrbitSpace">
+            <!-- Center Surya Core -->
+            <div class="sun-core graha-interactive-node active-graha-node" data-graha="Sun" title="Surya - The Sun (King & Soul)">
+              <div class="sun-flare flare-1"></div>
+              <div class="sun-flare flare-2"></div>
+              <div class="sun-sphere">☀️</div>
+              <span class="sun-label">Surya</span>
+            </div>
+
+            <!-- Orbit 1: Mercury & Venus -->
+            <div class="orbit-ring orbit-ring-1">
+              <div class="orbit-planet planet-mercury graha-interactive-node" data-graha="Mercury" title="Budhan (Mercury) - Intellect & Speech">
+                <span class="planet-icon">🟢</span>
+                <span class="planet-tooltip">Budhan</span>
+              </div>
+              <div class="orbit-planet planet-venus graha-interactive-node" data-graha="Venus" title="Shukran (Venus) - Art & Prosperity">
+                <span class="planet-icon">⚪</span>
+                <span class="planet-tooltip">Shukran</span>
+              </div>
+            </div>
+
+            <!-- Orbit 2: Moon & Mars -->
+            <div class="orbit-ring orbit-ring-2">
+              <div class="orbit-planet planet-moon graha-interactive-node" data-graha="Moon" title="Chandra (Moon) - Mind & Emotions">
+                <span class="planet-icon">🌙</span>
+                <span class="planet-tooltip">Chandra</span>
+              </div>
+              <div class="orbit-planet planet-mars graha-interactive-node" data-graha="Mars" title="Sevvai (Mars) - Energy & Valor">
+                <span class="planet-icon">🔴</span>
+                <span class="planet-tooltip">Sevvai</span>
+              </div>
+            </div>
+
+            <!-- Orbit 3: Jupiter & Saturn -->
+            <div class="orbit-ring orbit-ring-3">
+              <div class="orbit-planet planet-jupiter graha-interactive-node" data-graha="Jupiter" title="Guru (Jupiter) - Wisdom & Grace">
+                <span class="planet-icon">🟡</span>
+                <span class="planet-tooltip">Guru</span>
+              </div>
+              <div class="orbit-planet planet-saturn graha-interactive-node" data-graha="Saturn" title="Sani (Saturn) - Karma & Discipline">
+                <span class="planet-icon">🪐</span>
+                <span class="planet-tooltip">Sani</span>
+              </div>
+            </div>
+
+            <!-- Orbit 4: Rahu & Ketu (Shadow Planets) -->
+            <div class="orbit-ring orbit-ring-4">
+              <div class="orbit-planet planet-rahu graha-interactive-node" data-graha="Rahu" title="Rahu (North Node) - Ambition & Maya">
+                <span class="planet-icon">🟣</span>
+                <span class="planet-tooltip">Rahu</span>
+              </div>
+              <div class="orbit-planet planet-ketu graha-interactive-node" data-graha="Ketu" title="Ketu (South Node) - Moksha & Spirituality">
+                <span class="planet-icon">🟤</span>
+                <span class="planet-tooltip">Ketu</span>
+              </div>
+            </div>
+          </div>
+          <div class="cosmos-orbit-hint">
+            <span>✨ Click any revolving planet or card below to view Vedic energies</span>
+          </div>
+        </div>
+
+        <!-- Right: Dynamic Spotlight Glass Card -->
+        <div class="graha-spotlight-card" id="grahaSpotlightCard">
+          <div class="spotlight-glass-bg"></div>
+          <div class="spotlight-card-content">
+            <div class="spotlight-top-bar">
+              <div class="spotlight-planet-avatar" id="spotlightAvatar">☀️</div>
+              <div class="spotlight-title-group">
+                <div class="spotlight-sanskrit" id="spotlightSanskrit">SURYA BHAGAVAN • ஆத்மகாரகன்</div>
+                <h3 class="spotlight-name" id="spotlightName">Surya (The Sun)</h3>
+                <span class="spotlight-tagline" id="spotlightTagline">Lord of Vitality, Soul (Atma), Father & Sovereign Power</span>
+              </div>
+            </div>
+
+            <p class="spotlight-desc" id="spotlightDesc">
+              Surya represents the divine consciousness, inner illumination, life force (Prana), willpower, and leadership. As the King of the celestial cabinet, Sun governs royal favors, government recognition, courage, and core vitality.
+            </p>
+
+            <div class="spotlight-grid-stats">
+              <div class="stat-box">
+                <span class="stat-lbl">Own Sign (ஆட்சி)</span>
+                <span class="stat-val" id="spotlightRasi">Leo (Simha)</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-lbl">Exalted (உச்சம்)</span>
+                <span class="stat-val" id="spotlightExalt">Aries (Mesha 10°)</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-lbl">Debilitated (நீசம்)</span>
+                <span class="stat-val" id="spotlightDebil">Libra (Thulam 10°)</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-lbl">Gemstone (ரத்தினம்)</span>
+                <span class="stat-val" id="spotlightGem">Ruby (மாணிக்கம்)</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-lbl">Sacred Day (கிழமை)</span>
+                <span class="stat-val" id="spotlightDay">Sunday (ஞாயிறு)</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-lbl">Deity (அதிதேவதை)</span>
+                <span class="stat-val" id="spotlightDeity">Lord Shiva / Agni</span>
+              </div>
+            </div>
+
+            <!-- Beej Mantra Box -->
+            <div class="spotlight-mantra-box">
+              <div class="mantra-header">
+                <span class="mantra-icon">🕉️</span>
+                <span class="mantra-lbl">Sacred Beej Mantra</span>
+              </div>
+              <div class="mantra-text" id="spotlightMantra">ॐ ஹ்ராம் ஹ்ரீம் ஹ்ரௌம் ஸஹ சூர்யாய நமஹ ॥</div>
+            </div>
+
+            <!-- Action Button -->
+            <div class="spotlight-footer">
+              <button type="button" class="spotlight-cta-btn" id="btnSpotlightToChart">
+                <span id="spotlightCtaText">Analyze Your Planetary Placements</span>
+                <span class="arrow">&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 Navagrahas Quick Switcher Grid -->
+      <div class="navagraha-quick-grid" id="navagrahaQuickGrid">
+        <!-- Filled dynamically or pre-populated via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: The 12 Vedic Rasi Mandalam (Zodiac Signs) -->
+  <section id="homeRasiSection" class="home-rasi-section">
+    <div class="rasi-bg-glow"></div>
+    <div class="home-rasi-container">
+      <div class="rasi-header">
+        <div class="rasi-badge">♈ 12 SACRED ZODIAC HOUSES</div>
+        <h2 class="rasi-title">The 12 Vedic Rasi Mandalam <span class="gold-gradient">(ராசி மண்டலம்)</span></h2>
+        <p class="rasi-subtitle">Select any zodiac sign to explore its planetary lord, elemental balance, body rulership, and embedded Nakshatra quarters.</p>
+        
+        <!-- Element Filter Pills -->
+        <div class="rasi-filter-pills" id="rasiFilterPills">
+          <button type="button" class="filter-pill active" data-element="all">All (12 Signs)</button>
+          <button type="button" class="filter-pill" data-element="Fire">🔥 Fire (அக்னி)</button>
+          <button type="button" class="filter-pill" data-element="Earth">🌍 Earth (பூமி)</button>
+          <button type="button" class="filter-pill" data-element="Air">💨 Air (காற்று)</button>
+          <button type="button" class="filter-pill" data-element="Water">🌊 Water (நீர்)</button>
+        </div>
+      </div>
+
+      <!-- 12 Compact Cards Grid -->
+      <div class="rasi-compact-grid" id="rasiCardsGrid">
+        <!-- Filled dynamically via JS -->
+      </div>
+
+      <!-- Spacious & Perfectly Aligned Rasi Information Showcase -->
+      <div class="rasi-info-showcase" id="rasiSpotlightCard">
+        <div class="rasi-showcase-glass-glow"></div>
+
+        <!-- Top Header Bar: Left Identity + Right CTA -->
+        <div class="rasi-info-header">
+          <div class="rasi-info-identity">
+            <div class="rasi-glyph-frame" id="rasiSpotlightSymbol">♈</div>
+            <div class="rasi-info-titles">
+              <div class="rasi-header-kicker" id="rasiSpotlightNum">SIGN 1 • CHARA (சரம்) • FIRE</div>
+              <h3 class="rasi-header-title" id="rasiSpotlightName">Aries (மேஷம்)</h3>
+              <div class="rasi-header-tags">
+                <span class="info-pill lord-pill" id="rasiSpotlightLord">Lord: Mars (செவ்வாய்)</span>
+                <span class="info-pill elem-pill" id="rasiSpotlightElement">Fire (அக்னி)</span>
+                <span class="info-pill mobility-pill" id="rasiSpotlightMobility">Cardinal / Chara</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rasi-info-cta-wrap">
+            <button type="button" class="rasi-showcase-btn" id="btnRasiToChart">
+              <span>Calculate Your Janma Rasi Placements</span>
+              <span class="arrow">&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Body: 2 Balanced Columns -->
+        <div class="rasi-info-body-grid">
+          <!-- Column 1: Vedic Archetype & Characteristics -->
+          <div class="rasi-info-col desc-col">
+            <h4 class="col-title"><span class="title-icon">📜</span> Cosmic Archetype &amp; Vedic Significance</h4>
+            <p class="rasi-detailed-desc" id="rasiSpotlightDesc">
+              Mesha represents primal initiative, courage, vital life force, and enterprise. Governed by Sevvai, individuals with strong Aries energy are courageous trailblazers and energetic pioneers.
+            </p>
+
+            <!-- 4-Box Attributes Grid -->
+            <div class="rasi-attributes-grid">
+              <div class="attrib-card">
+                <div class="attrib-icon">🫀</div>
+                <div class="attrib-content">
+                  <span class="attrib-label">Body Rulership (அங்கம்)</span>
+                  <span class="attrib-value" id="rasiSpotlightBody">Head, Brain &amp; Forehead</span>
+                </div>
+              </div>
+              <div class="attrib-card">
+                <div class="attrib-icon">🧭</div>
+                <div class="attrib-content">
+                  <span class="attrib-label">Auspicious Direction (திசை)</span>
+                  <span class="attrib-value" id="rasiSpotlightDirection">East (கிழக்கு)</span>
+                </div>
+              </div>
+              <div class="attrib-card">
+                <div class="attrib-icon">💎</div>
+                <div class="attrib-content">
+                  <span class="attrib-label">Lucky Gem / Color</span>
+                  <span class="attrib-value" id="rasiSpotlightGem">Red Coral (பவளம்) / Crimson</span>
+                </div>
+              </div>
+              <div class="attrib-card">
+                <div class="attrib-icon">⚖️</div>
+                <div class="attrib-content">
+                  <span class="attrib-label">Dignities (உச்சம் / நீசம்)</span>
+                  <span class="attrib-value" id="rasiSpotlightDignities">Sun Exalted • Saturn Debilitated</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Nakshatra Quarters in this Sign -->
+          <div class="rasi-info-col nakshatra-col">
+            <h4 class="col-title"><span class="title-icon">✨</span> Embedded Nakshatra Quarters (நட்சத்திர பாதங்கள்)</h4>
+            <p class="nakshatra-helper-text">Every Vedic sign spans 30° consisting of exactly 9 Nakshatra Padas (quarters):</p>
+            <div class="nakshatra-cards-stack" id="rasiSpotlightNakshatras">
+              <!-- Rendered dynamically via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="app-body">
+  <nav id="sideNav" class="side-nav hidden">
+    <h2 id="lblReading">Reading</h2>
+    <ul id="sideNavList" class="side-nav-list">
+    </ul>
+  </nav>
+  <nav id="pariharamNav" class="side-nav hidden">
+    <h2 id="lblPariharamNav">Pariharam</h2>
+    <ul id="pariharamNavList" class="side-nav-list"></ul>
+  </nav>
+
+  <!-- Global Loading Indicator -->
+  <div id="loadingOverlay" class="loading-overlay hidden">
+    <div class="loading-card">
+      <div class="cosmic-spinner">
+        <div class="spinner-core">🪐</div>
+      </div>
+      <div class="loading-title">Calculating Chart...</div>
+      <div class="loading-sub">Please wait a moment</div>
+    </div>
+  </div>
+
+  <main>
+    <section id="formSection" class="card hidden form-card-modern">
+      <div class="form-header-bar">
+        <div>
+          <h2 id="lblFormTitle" class="form-title-text">New Horoscope</h2>
+          <p class="form-subtitle-text">Enter birth details to generate full D1-D60 charts & Vimshottari Dasa</p>
+        </div>
+      </div>
+
+      <form id="birthForm" class="birth-form-grid">
+        <div class="form-group-item">
+          <label for="name"><span id="lblName">Name</span></label>
+          <div class="input-with-icon">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </span>
+            <input type="text" id="name" placeholder="e.g. Anand" required />
+          </div>
+        </div>
+
+        <div class="form-group-item">
+          <label for="gender"><span id="lblGender">Gender</span></label>
+          <div class="input-with-icon">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M16 8l5-5m0 0h-4m4 0v4M8 16l-5 5m0 0h4m-4 0v-4"></path></svg>
+            </span>
+            <select id="gender">
+              <option value="Male" id="optMale">Male</option>
+              <option value="Female" id="optFemale">Female</option>
+              <option value="Other" id="optOther">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group-item">
+          <label for="dob"><span id="lblDob">Date of Birth</span></label>
+          <div class="input-with-icon">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </span>
+            <input type="date" id="dob" required />
+          </div>
+        </div>
+
+        <div class="form-group-item">
+          <label><span id="lblTob">Time of Birth</span></label>
+          <div class="tob-group-modern">
+            <div class="tob-select-wrap">
+              <select id="tobHour" aria-label="Hour">
+                <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                <option value="10">10</option><option value="11">11</option><option value="12" selected>12</option>
+              </select>
+            </div>
+            <span class="tob-colon">:</span>
+            <div class="tob-select-wrap">
+              <select id="tobMinute" aria-label="Minute"></select>
+            </div>
+            <div class="tob-select-wrap ampm-wrap">
+              <select id="tobAmPm" aria-label="AM or PM">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group-item full-width pob-field">
+          <label for="pob"><span id="lblPob">Place of Birth</span></label>
+          <div class="input-with-icon">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
+            <input type="text" id="pob" autocomplete="off" placeholder="Type city name (e.g. Chennai, Madurai)..." required />
+          </div>
+          <ul id="pobResults" class="pob-results hidden"></ul>
+        </div>
+
+
+        <button type="submit" id="btnCalculate" class="btn-calculate-glow">
+          <span class="btn-icon">⚡</span>
+          <span class="btn-text">Calculate Chart</span>
+        </button>
+      </form>
+    </section>
+
+    <section id="savedSection" class="card hidden saved-section-card">
+      <div class="section-title-wrap">
+        <span class="section-icon">🗂️</span>
+        <h2 id="lblSavedCharts">Saved Charts</h2>
+      </div>
+      <ul id="savedList" class="saved-charts-grid"></ul>
+    </section>
+
+    <section id="resultSection" class="card hidden result-card-modern">
+      <!-- Profile Header Summary Banner -->
+      <div id="chartProfileCard" class="chart-profile-card">
+        <div class="profile-header-main">
+          <div class="profile-avatar" id="profileAvatar">✨</div>
+          <div class="profile-meta">
+            <h2 id="profileName" class="profile-name">Birth Chart</h2>
+            <p id="profileBirthDetails" class="profile-details">--</p>
+          </div>
+          <div class="profile-badges">
+            <span class="badge-pill gold"><span class="badge-icon">⚡</span> <span id="badgeLagna">Lagna: --</span></span>
+            <span class="badge-pill maroon"><span class="badge-icon">🌙</span> <span id="badgeMoon">Moon: --</span></span>
+            <span class="badge-pill navy"><span class="badge-icon">⭐</span> <span id="badgeStar">Star: --</span></span>
+            <span class="badge-pill green"><span class="badge-icon">⏳</span> <span id="badgeDasa">Dasa: --</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="chartTab" id="lblChartTab">Chart</button>
+        <button class="tab-btn" data-tab="dasaTab" id="lblDasaTab">Dasa</button>
+        <button class="tab-btn" data-tab="yogaTab" id="lblYogaTab">Yogas</button>
+        <button class="tab-btn" data-tab="taraTab" id="lblTaraTab">Tara Balam</button>
+        <button class="tab-btn" data-tab="detailsTab" id="lblDetailsTab">Graha Details</button>
+        <button class="tab-btn" data-tab="dignityTab" id="lblDignityTab">Ucham / Neecham</button>
+        <button class="tab-btn" data-tab="peyarchiTab" id="lblPeyarchiTab">Moorthy</button>
+        <button class="tab-btn" data-tab="drekkanaTab" id="lblDrekkanaTab">Drekkana Lords Aathipathyam</button>
+        <button class="tab-btn" data-tab="sashtashtagamTab" id="lblSashtashtagamTab">Navamsa Sashtashtagam</button>
+      </div>
+
+      <div id="chartTab" class="tab-panel active">
+        <div class="chart-layout-grid">
+          <!-- Left Column: Varga Dropdown & South Indian Chart Grid -->
+          <div class="chart-left-col">
+            <div class="varga-select-wrap">
+              <label for="vargaSelect" class="varga-label">Varga Chart</label>
+              <select id="vargaSelect"></select>
+            </div>
+            <div id="chartGrid" class="south-indian-grid"></div>
+            <div id="soonyamLegend" class="soonyam-legend hidden"><span class="soonyam-swatch"></span><span id="soonyamLegendText"></span></div>
+          </div>
+
+          <!-- Right Column: Diagnostics & Astrological Info Boxes -->
+          <div class="chart-right-col">
+            <h3 class="info-boxes-header">Astrological Diagnostics & Lagnas</h3>
+            <div class="info-boxes">
+              <details id="induLagnaBox" class="info-box" open>
+                <summary id="lblInduLagna">Indu Lagna</summary>
+                <div id="induLagnaValue"></div>
+                <div id="induLagnaHint" class="info-hint"></div>
+              </details>
+              <details id="pranapadaBox" class="info-box" open>
+                <summary id="lblPranapada">Pranapada Lagna</summary>
+                <div id="pranapadaValue"></div>
+                <div id="pranapadaHint" class="info-hint"></div>
+              </details>
+              <details id="tithiBox" class="info-box" open>
+                <summary id="lblTithiBox">Tithi and Thithi Soonyam</summary>
+                <div><span id="lblTithi" class="info-label">Tithi</span>: <span id="tithiValue"></span></div>
+                <div><span id="lblSoonyam" class="info-label">Thithi Soonyam</span>: <span id="soonyamValue"></span></div>
+                <div id="soonyamHint" class="info-hint"></div>
+              </details>
+              <details id="mudakkuBox" class="info-box" open>
+                <summary id="lblMudakku">Mudakku Rasi</summary>
+                <div id="mudakkuValue"></div>
+                <div id="mudakkuLagnaNote" class="info-hint"></div>
+                <div id="mudakkuHint" class="info-hint"></div>
+              </details>
+              <details id="upasanaBox" class="info-box" open>
+                <summary id="lblUpasana">Upasana Deivam</summary>
+                <div id="upasanaCalc"></div>
+                <div><label for="upasanaRasi" id="lblUpasanaRasi" class="info-label">Rasi</label>
+                  <select id="upasanaRasi" class="upasana-select"></select></div>
+                <div id="upasanaValue" class="upasana-value"></div>
+                <div id="upasanaHint" class="info-hint"></div>
+              </details>
+              <details id="kaalaPakaiBox" class="info-box" open>
+                <summary id="lblKaalaPakai">Kaala Pakai</summary>
+                <div id="kaalaPakaiValue"></div>
+                <div><label for="kaalaPakaiPlanet" id="lblKaalaPakaiPlanet" class="info-label">Planet</label>
+                  <select id="kaalaPakaiPlanet" class="upasana-select"></select></div>
+                <div id="kaalaPakaiLookup" class="upasana-value"></div>
+                <div id="kaalaPakaiEffect"></div>
+                <div id="kaalaPakaiHint" class="info-hint"></div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="dasaTab" class="tab-panel">
+        <table id="dasaTable">
+          <thead><tr><th>Lord</th><th>Start</th><th>End</th></tr></thead>
+          <tbody id="dasaBody"></tbody>
+        </table>
+      </div>
+
+      <div id="yogaTab" class="tab-panel">
+        <div id="yogaSummary" class="yoga-summary"></div>
+        <ul id="yogaList"></ul>
+      </div>
+
+      <div id="taraTab" class="tab-panel">
+        <table id="taraTable">
+          <thead><tr><th>#</th><th>Nakshatra</th><th>Category</th><th>Quality</th></tr></thead>
+          <tbody id="taraBody"></tbody>
+        </table>
+      </div>
+
+      <div id="detailsTab" class="tab-panel">
+        <div id="kaalaPakaiSummary" class="yoga-summary"></div>
+        <table id="detailsTable">
+          <thead>
+            <tr>
+              <th id="thPlanet">Planet</th><th id="thRasi">Rasi</th><th id="thRasiLord">Rasi Lord</th>
+              <th id="thAbsDeg">Absolute Degree</th><th id="thDegInSign">Degree in Sign</th>
+              <th id="thStar">Star</th><th id="thPada">Pada</th><th id="thStarLord">Star Lord</th>
+              <th id="thPushkara">Pushkara Navamsa</th><th id="thKaalaPakai">Kaala Pakai</th>
+            </tr>
+          </thead>
+          <tbody id="detailsBody"></tbody>
+        </table>
+      </div>
+
+      <div id="dignityTab" class="tab-panel">
+        <div id="dignitySummary" class="yoga-summary"></div>
+        <table id="dignityTable" class="hidden">
+          <thead><tr>
+            <th id="thDgPlanet">Planet</th><th id="thDgState">State</th><th id="thDgRasi">Rasi</th>
+            <th id="thDgDeg">Degree in Sign</th><th id="thDgDeep">Deep point</th><th id="thDgDist">From deep point</th>
+          </tr></thead>
+          <tbody id="dignityBody"></tbody>
+        </table>
+        <p id="dignityNote" class="reading-note"></p>
+      </div>
+
+      <div id="peyarchiTab" class="tab-panel">
+        <div id="peyarchiSummary" class="yoga-summary"></div>
+        <div class="peyarchi-filter"><label for="peyarchiFilter" id="lblPeyarchiFilter" class="info-label">Planet</label>
+          <select id="peyarchiFilter" class="upasana-select"></select></div>
+        <table id="peyarchiTable">
+          <thead><tr>
+            <th id="thPyPlanet">Planet</th><th id="thPyEnters">Enters</th><th id="thPyWhen">Date and time</th>
+            <th id="thPyMoon">Moon then</th><th id="thPyCount">Count</th><th id="thPyMoorthi">Moorthi</th>
+          </tr></thead>
+          <tbody id="peyarchiBody"></tbody>
+        </table>
+        <p id="peyarchiNote" class="reading-note"></p>
+      </div>
+
+      <div id="drekkanaTab" class="tab-panel">
+        <div id="drekkanaSummary" class="yoga-summary"></div>
+        <div id="drekkanaPariharam" class="pariharam hidden"></div>
+        <table id="drekkanaTable">
+          <thead><tr>
+            <th id="thDkPlanet">Planet</th><th id="thDkRasi">Rasi</th><th id="thDkDeg">Degree in Sign</th>
+            <th id="thDkDrekkana">Drekkana</th><th id="thDkController">Controller</th><th id="thDkControllerIn">Controller in</th>
+            <th id="thDkCount">From planet</th><th id="thDkResult">Result</th>
+          </tr></thead>
+          <tbody id="drekkanaBody"></tbody>
+        </table>
+        <p id="drekkanaNote" class="reading-note"></p>
+      </div>
+
+      <div id="sashtashtagamTab" class="tab-panel">
+        <div id="sashtashtagamSummary" class="yoga-summary"></div>
+        <div id="sashtashtagamPariharam" class="pariharam hidden"></div>
+        <table id="sashtashtagamTable">
+          <thead><tr>
+            <th id="thSsPlanet">Planet</th><th id="thSsD1Rasi">D1 rasi</th><th id="thSsD1House">D1 house</th>
+            <th id="thSsD9Rasi">D9 rasi</th><th id="thSsCount">Count</th><th id="thSsRules">Rules in D1</th>
+            <th id="thSsResult">Result</th>
+          </tr></thead>
+          <tbody id="sashtashtagamBody"></tbody>
+        </table>
+        <div id="sashtashtagamTiming"></div>
+        <p id="sashtashtagamNote" class="reading-note"></p>
+      </div>
+    </section>
+
+    <section id="readingSection" class="card hidden">
+      <button type="button" id="readingBack" class="reading-back">&larr; <span id="lblBack">Back</span></button>
+      <h2 id="readingTitle"></h2>
+      <div id="readingContent"></div>
+    </section>
+
+    <section id="pariharamSection" class="card hidden">
+      <h2 id="lblPariharamTitle">Pariharam</h2>
+      <div id="pariharamContent"></div>
+    </section>
+
+    <section id="prasannamSection" class="card hidden">
+      <h2 id="lblPrasannamTitle">Prasannam</h2>
+      <div class="pras-meta">
+        <div><span id="lblPrasTime" class="info-label">Time</span>: <span id="prasTime"></span></div>
+        <div><span id="lblPrasPlace" class="info-label">Place</span>: <span id="prasPlace"></span></div>
+        <div class="pras-actions">
+          <button type="button" id="prasNow" class="pras-btn">Now</button>
+          <button type="button" id="prasUseLocation" class="pras-btn secondary">Use my location</button>
+          <button type="button" id="prasChangePlace" class="pras-btn secondary">Change place</button>
+        </div>
+        <div id="prasStatus" class="info-hint"></div>
+        <div id="prasSearch" class="pob-field hidden">
+          <input type="text" id="prasPlaceInput" autocomplete="off" />
+          <ul id="prasPlaceResults" class="pob-results hidden"></ul>
+        </div>
+      </div>
+      <div id="prasResult" class="hidden">
+        <div class="chandra-nadi">
+          <h3 id="lblChandraNadi">Chandra Nadi</h3>
+          <div id="chandraNadiMain" class="chandra-nadi-main"></div>
+          <table class="chandra-nadi-table"><tbody id="chandraNadiBody"></tbody></table>
+        </div>
+        <div id="prasGrid" class="south-indian-grid"></div>
+        <table id="prasTable">
+          <thead><tr>
+            <th id="thPrPlanet">Planet</th><th id="thPrRasi">Rasi</th><th id="thPrDeg">Degree in Sign</th>
+            <th id="thPrStar">Star</th><th id="thPrPada">Pada</th>
+          </tr></thead>
+          <tbody id="prasBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  </div>
+
+  <!-- Simple & Elegant Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <!-- Brand Col -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-brand">
+            <img src="astrojeevi_logo.jpg" alt="AstroJeevi Logo" class="footer-logo-img" />
+            <span class="footer-brand-name">AstroJeevi</span>
+          </div>
+          <p class="footer-tagline">
+            High-precision Vedic Jathakam, 7 Divisional Vargas (D1–D60), Vimshottari Dasa timing, and traditional Tamil Nadu temple pariharams. Calibrated with Swiss Ephemeris &amp; Sidereal Lahiri Ayanamsa.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-chip">✨ Lahiri Ayanamsa</span>
+            <span class="footer-chip">🪐 Navagrahas</span>
+            <span class="footer-chip">♈ 12 Rasis</span>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" id="footerLinkHome">Home Overview</a></li>
+            <li><a href="javascript:void(0)" id="footerLinkJathakam">Birth Chart (Jathakam)</a></li>
+            <li><a href="javascript:void(0)" id="footerLinkPrasannam">Chandra Nadi Prasannam</a></li>
+            <li><a href="javascript:void(0)" id="footerLinkPariharam">Remedies &amp; Pariharams</a></li>
+          </ul>
+        </div>
+
+        <!-- Vedic Modules -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Calculations</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" id="footerLinkNavagraha">Navagraha Mandalam</a></li>
+            <li><a href="javascript:void(0)" id="footerLinkRasi">12 Rasi Mandalam</a></li>
+            <li><a href="javascript:void(0)" id="footerLinkDasa">Vimshottari Dasa</a></li>
+            <li><a href="javascript:void(0)" id="footerLinkSoonyam">Thithi Soonyam &amp; Mudakku</a></li>
+          </ul>
+        </div>
+
+        <!-- Tradition Column -->
+        <div class="footer-col footer-tradition-col">
+          <h4 class="footer-heading">Vedic Tradition</h4>
+          <p class="footer-tradition-text">
+            "லோகா சமஸ்தா சுகினோ பவந்து"<br />
+            Illuminating human destiny through timeless celestial wisdom and authentic divine timing.
+          </p>
+          <div class="footer-tradition-badge">
+            <span>🕉️ வேத ஜோதிட ஞானம்</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 <strong>AstroJeevi</strong> &mdash; Authentic Vedic Astrology. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <span>Precision Ephemeris Engine</span>
+          <span class="sep">•</span>
+          <span>South Indian Diamond Chart</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="labels.js"></script>
+  <script src="chart.js"></script>
+</body>
+</html>
